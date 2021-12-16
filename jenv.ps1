@@ -99,8 +99,8 @@ function Invoke-Use {
     $Env:PATH = $newPath
     
     if ($saveEnv) {
-        [System.Environment]::SetEnvironmentVariable('JAVA_HOME', $config.Get_Item($name), [System.EnvironmentVariableTarget]::User)
-        [System.Environment]::SetEnvironmentVariable('PATH', $newPath, [System.EnvironmentVariableTarget]::User)
+        [System.Environment]::SetEnvironmentVariable('JAVA_HOME', $config.Get_Item($name), [System.EnvironmentVariableTarget]::Machine)
+        [System.Environment]::SetEnvironmentVariable('PATH', $newPath, [System.EnvironmentVariableTarget]::Machine)
     }
     Exit
 }
